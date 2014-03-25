@@ -1,0 +1,98 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" alternatively, pass a path where Vundle should install bundles
+"let path = '~/some/path/here'
+"call vundle#rc(path)
+
+" let Vundle manage Vundle, required
+Bundle 'gmarik/vundle'
+
+" syntax highlighting for laravel blade templates
+Bundle 'xsbeats/vim-blade'
+
+" awesome status bar
+Bundle 'bling/vim-airline'
+
+" make command mode search across files a bit easier
+Bundle 'vim-scripts/Greplace.vim'
+
+" 'cause sumblinetext got be hooked on the interactive file tree
+Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
+
+" Make gvim-only colorschemes work transparently in terminal vim
+Bundle 'godlygeek/csapprox'
+Bundle 'godlygeek/tabular'
+
+" provides insert mode auto-completion for quotes, parens, brackets, etc.
+Bundle 'Raimondi/delimitMate'
+
+" Vim plugin for intensely orgasmic commenting
+Bundle 'scrooloose/nerdcommenter'
+
+" Snipmate
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+
+" auto complete
+" Bundle "Valloric/YouCompleteMe"
+
+" Surround
+Bundle 'tpope/vim-surround'
+
+" CVS/SVN/SVK/git/hg/bzr integration plugin 
+Bundle 'vcscommand.vim'
+" A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
+Bundle 'airblade/vim-gitgutter'
+" Show a VCS diff using Vim's sign column.
+Bundle 'mhinz/vim-signify'
+
+" True Sublime Text style multiple selections for Vim
+Bundle 'terryma/vim-multiple-cursors'
+
+" Fuzzy file, buffer, mru, tag, etc finder.
+Bundle 'kien/ctrlp.vim'
+Bundle 'tacahiroy/ctrlp-funky'
+
+" A Vim plugin for visually displaying indent levels in code
+Bundle 'nathanaelkane/vim-indent-guides'
+
+" A Filetype plugin for csv files
+Bundle 'chrisbra/csv.vim'
+
+" Display your undo history in a graph.
+Bundle 'mbbill/undotree'
+
+" Start a * or # search from a visual block
+Bundle 'nelstrom/vim-visual-star-search'
+
+" PHP Indenting
+Bundle '2072/PHP-Indenting-for-VIm'
+
+" Create a function list
+Bundle 'vim-scripts/taglist.vim'
+
+""" Syntax 
+Bundle 'elzr/vim-json'
+Bundle 'pangloss/vim-javascript'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'xsbeats/vim-blade'
+" Syntax checking hacks for vim
+Bundle 'scrooloose/syntastic'
+
+filetype plugin indent on     " required
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install (update) bundles
+" :BundleSearch(!) foo - search (or refresh cache first) for foo
+" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle commands are not allowed.
+let g:airline#extensions#tabline#enabled = 1
