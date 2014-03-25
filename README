@@ -1,4 +1,12 @@
+VIM configs for Derek Rose.
+about.me/derekrose
+
 Installation:
 	git clone https://github.com/Bishma/dotvim.git ~/.vim
 	ln -s ~/.vim/.vimrc ~/.vimrc
 	ln -s ~/.vim/.vim-bundle ~/.vim-bundle
+	git submodule init
+	git submodule update
+
+Install bundles from insize VIM:
+	:BundleInstall!
