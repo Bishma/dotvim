@@ -74,9 +74,6 @@ Bundle 'nelstrom/vim-visual-star-search'
 " PHP Indenting
 Bundle '2072/PHP-Indenting-for-VIm'
 
-" Create a function list
-Bundle 'vim-scripts/taglist.vim'
-
 """ Syntax 
 Bundle 'elzr/vim-json'
 Bundle 'pangloss/vim-javascript'
