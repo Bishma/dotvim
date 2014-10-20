@@ -2,7 +2,8 @@ so ~/.vim-bundle
 
 set t_Co=256
 set laststatus=2
-colorscheme xoria256
+set splitright
+colorscheme desert
 syntax on
 set showcmd
 set backspace=2
@@ -13,9 +14,7 @@ set shiftwidth=4
 set softtabstop=4
 set ttymouse=xterm2
 set mouse-=a
-let g:NERDTreeDirArrows=0
-let g:ctrlp_extensions = ['funky']
-let g:ctrlp_funky_syntax_highlight = 1
+let g:netrw_liststyle=3
 
 "line numbering, indenting, and searching
 set number
@@ -32,27 +31,21 @@ nmap <leader>h <c-w>h
 nmap <leader>j <c-w>j
 nmap <leader>k <c-w>k
 nmap <leader>l <c-w>l
+nmap <leader>= <c-w>=
 
 " tab nav
-map <leader>[ :tabp<CR>
-map <leader>] :tabn<CR>
-
-"ctrlp
-nnoremap <Leader>fu :CtrlPFunky<Cr>
-nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+map <leader>H :tabp<CR>
+map <leader>L :tabn<CR>
 
 "key mappings
 nnoremap <F9> :set invpaste paste?<CR>
 nnoremap <leader><BS> :!bash<CR>
 nnoremap <leader>f :Flisttoggle<CR>
-nmap <SPACE> i_<ESC>r
 set pastetoggle=<F9>
 set showmode
-map <F2> :tab new<CR>
-map <F3> n
 map <leader>w :mksession ~/autosession.vim<CR>
 map <leader>W :source ~/autosession.vim<CR>
-nnoremap <leader>kb :NERDTreeTabsToggle<CR>
+nnoremap <leader>\ :Explore<CR>
 vnoremap <c-c> "*y
 
 "I'm tired of restarting vim or typing :so, so this auto sources the .vimrc file when edited
