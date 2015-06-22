@@ -2,7 +2,6 @@ so ~/.vim-bundle
 
 set t_Co=256
 set laststatus=2
-set splitright
 colorscheme desert
 syntax on
 set showcmd
@@ -12,9 +11,13 @@ set hidden
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set expandtab
 set ttymouse=xterm2
 set mouse-=a
+set fileformat=unix
 let g:netrw_liststyle=3
+let g:ctrlp_extensions = ['funky']
+let g:ctrlp_funky_syntax_highlight = 1
 
 "line numbering, indenting, and searching
 set number
@@ -22,30 +25,49 @@ set wildmode=list:longest
 set smartindent
 set autoindent
 set splitbelow
+set splitright
 set hlsearch
 set incsearch
 command! H let @/=""
+command! M %s///g
 
 " window nav
-nmap <leader>h <c-w>h
-nmap <leader>j <c-w>j
-nmap <leader>k <c-w>k
-nmap <leader>l <c-w>l
-nmap <leader>= <c-w>=
+nmap <Up> <c-w>k
+nmap <Down> <c-w>j
+nmap <Left> <c-w>h
+nmap <Right> <c-w>l
+" split sizing
+nmap <leader><Up> :res +5<CR>
+nmap <leader><Down> :res -5<CR>
+nmap <leader><Right> :vertical resize +5<CR>
+nmap <leader><Left> :vertical resize +5<CR>
+" cap Q = buffer Delete
+:command! Q :bd
 
 " tab nav
-map <leader>H :tabp<CR>
-map <leader>L :tabn<CR>
+map <leader>[ :tabp<CR>
+map <leader>] :tabn<CR>
+nnoremap <leader>{ <C-w><C-h>
+nnoremap <leader>} <C-w><C-l>
+
+" simple opening od explorer
+map <leader>kb :Explore<CR>
+
+"ctrlp
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
 "key mappings
 nnoremap <F9> :set invpaste paste?<CR>
 nnoremap <leader><BS> :!bash<CR>
 nnoremap <leader>f :Flisttoggle<CR>
+nmap <SPACE> i_<ESC>r
 set pastetoggle=<F9>
 set showmode
-map <leader>w :mksession ~/autosession.vim<CR>
-map <leader>W :source ~/autosession.vim<CR>
-nnoremap <leader>\ :Explore<CR>
+map <leader>n :tabnew<CR>
+map <leader>v :vsp<CR>
+map <leader>s :sp<CR>
+nnoremap g= gg=G``
 vnoremap <c-c> "*y
 
 "I'm tired of restarting vim or typing :so, so this auto sources the .vimrc file when edited
@@ -64,3 +86,8 @@ function! ToggleMouse()
 		echo "Mouse!"
 	endif
 endfunction
+
+" windoz
+if has("win32")
+    cd c:\Users\derekr\sublimeWS\cdk
+endif
