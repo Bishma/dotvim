@@ -18,6 +18,7 @@ set fileformat=unix
 let g:netrw_liststyle=3
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_syntax_highlight = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "line numbering, indenting, and searching
 set number
@@ -42,18 +43,21 @@ nmap <leader><Down> :res -5<CR>
 nmap <leader><Right> :vertical resize +5<CR>
 nmap <leader><Left> :vertical resize +5<CR>
 " cap Q = buffer Delete
-:command! Q :bd
+command! Q :bd
+command! Wq write|bdelete
 
 " tab nav
-map <leader>[ :tabp<CR>
-map <leader>] :tabn<CR>
-nnoremap <leader>{ <C-w><C-h>
-nnoremap <leader>} <C-w><C-l>
+map <leader>[ :bp<CR>
+map <leader>] :bn<CR>
+nnoremap <leader>{ :tabp<CR>
+nnoremap <leader>} :tabn<CR>
 
 " simple opening od explorer
 map <leader>kb :Explore<CR>
 
 "ctrlp
+nnoremap <Leader>p :CtrlPBuffer<Cr>
+nnoremap <Leader>P :CtrlP<Cr>
 nnoremap <Leader>fu :CtrlPFunky<Cr>
 nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
