@@ -30,7 +30,7 @@ set splitright
 set hlsearch
 set incsearch
 command! H let @/=""
-command! M %s///g
+command! M set ff=unix|%s/\r//g
 
 " window nav
 nmap <Up> <c-w>k
@@ -44,7 +44,9 @@ nmap <leader><Right> :vertical resize +5<CR>
 nmap <leader><Left> :vertical resize +5<CR>
 " cap Q = buffer Delete
 command! Q :bd
-command! Wq write|bdelete
+command! W set ff=unix|write
+command! Wq set ff=unix|write|quit
+command! Wd set ff=unix|write|bdelete
 
 " tab nav
 map <leader>[ :bp<CR>
