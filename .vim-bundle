@@ -27,9 +27,6 @@ Bundle 'godlygeek/tabular'
 " provides insert mode auto-completion for quotes, parens, brackets, etc.
 Bundle 'Raimondi/delimitMate'
 
-" file search
-Bundle "Shougo/unite"
-
 " Vim plugin for intensely orgasmic commenting
 Bundle 'scrooloose/nerdcommenter'
 
