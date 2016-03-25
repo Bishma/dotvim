@@ -76,6 +76,9 @@ Bundle 'xsbeats/vim-blade'
 " Syntax checking hacks for vim
 Bundle 'scrooloose/syntastic'
 
+" jade highlighting
+Bundle 'digitaltoad/vim-pug'
+
 filetype plugin indent on     " required
 "
 " Brief help
