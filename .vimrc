@@ -1,8 +1,8 @@
 so ~/.vim-bundle
 
-set t_Co=256
+set t_Co=16
 set laststatus=2
-colorscheme desert
+colorscheme noctu
 syntax on
 set showcmd
 set backspace=2
@@ -19,6 +19,10 @@ let g:netrw_liststyle=3
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_syntax_highlight = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
+
+" searching
+set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column\ --vimgrep
+set grepformat=%f:%l:%c:%m,%f:%l:%m
 
 "line numbering, indenting, and searching
 set number
@@ -56,12 +60,6 @@ nnoremap <leader>} :tabn<CR>
 
 " simple opening od explorer
 map <leader>kb :Explore<CR>
-
-"ctrlp
-nnoremap <Leader>p :CtrlPBuffer<Cr>
-nnoremap <Leader>P :CtrlP<Cr>
-nnoremap <Leader>fu :CtrlPFunky<Cr>
-nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
 "key mappings
 nnoremap <F9> :set invpaste paste?<CR>
