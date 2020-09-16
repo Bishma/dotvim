@@ -11,17 +11,8 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
 
-" a good 16 color template for bash on windows
-Bundle 'noahfrederick/vim-noctu'
-
-" syntax highlighting for laravel blade templates
-Bundle 'xsbeats/vim-blade'
-
 " awesome status bar
 Bundle 'bling/vim-airline'
-
-" youCompleteMe for autocomplete
-Bundle 'Valloric/YouCompleteMe'
 
 " Make gvim-only colorschemes work transparently in terminal vim
 Bundle 'godlygeek/csapprox'
